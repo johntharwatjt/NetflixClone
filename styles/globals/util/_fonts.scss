@@ -1,0 +1,19 @@
+@font-face {
+    font-family: corbyn;
+    src: url(assets/fonts/corbyn.otf)
+}
+@font-face {
+    font-family: tokyoDream;
+    src: url(assets/fonts/TokyoDreams-Regular.ttf)
+}
+:root{
+
+
+    /*font style*/
+   --ff-title: corbyn; 
+   --ff-sec-title: font-family: 'Roboto Condensed', sans-serif; 
+   --ff-text: sans; 
+   --ff-serif: "Crimson Text", serif;
+   --ff-tokyodream:tokyodream
+   
+   }

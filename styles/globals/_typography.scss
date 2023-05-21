@@ -1,0 +1,52 @@
+/* --------typography--------- */
+
+
+h1,
+h2,
+h3,
+h4,
+p {
+margin: 0;
+}
+
+h1{
+    font-family:  var(--ff-title); 
+    font-size: 84px;
+    color: var(--clr-title);
+}
+
+h2,h3{
+    font-family: var(--ff-text);
+    line-height: 0.8;
+    
+    
+    }
+    h2{
+        font-size: 24px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    .secondary-titles{
+        color: var(--clr-secondary);
+        font-size: 22px;
+        line-height: 1.1rem;
+        
+       }
+
+ol, ul ,a{
+	list-style: none;
+    text-decoration: none;
+    
+ 
+}
+
+p{
+margin-bottom: 0.85rem;
+}
+
+
+h3{
+ 
+    color: var(--clr-h3-text);
+}
