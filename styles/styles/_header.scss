@@ -4,6 +4,8 @@
   }
 .search-btn{
  background-color: rgba(255, 0, 0, 0.438);   
+ border: none;
+ padding: 0.3rem 0.7rem;
     &:hover{
           opacity: 0.7;
         }

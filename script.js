@@ -122,6 +122,7 @@ function onHandleClick(handle){
         slider.style.setProperty('--slider-index',sliderIndex + 1);
         const itemcount= slider.children.length;
         count++;
+        console.log(count)
         if (count > 2){
             slider.style.setProperty('--slider-index',0);
             count = 0;
