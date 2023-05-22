@@ -3,7 +3,7 @@ cloning Netflix main page
 
 ## Description
 
-* using Themoviedb API,https://www.themoviedb.org/
+* using Themoviedb API (https://www.themoviedb.org/)
 
 ## Main Features
 
