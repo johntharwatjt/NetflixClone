@@ -1,13 +1,9 @@
-
-  
-  
     $handle-size: 3rem;
- 
     $img-gap: .25rem;
   
   
  main{
-    padding-top: 10rem; 
+    padding-top: 1rem; 
 }
   
   .slider-container {
@@ -31,6 +27,10 @@
         flex: 0 0 calc(100% / var(--items-per-screen));
         max-width: calc(100% / var(--items-per-screen));
         aspect-ratio: 16 / 9;
+        height: 150%;
+
+
+       
         padding: $img-gap;
         border-radius: 1rem;
         object-fit: cover;
@@ -91,25 +91,11 @@
   }
   
   .slider-title {
-    font-size: 2rem;
+    font-size: 1.1rem;
     margin: 0;
   }
   
-//   .progress-bar {
-//     display: flex;
-//     gap: .25rem;
-//   }
-  
-//   .progress-item {
-//     flex: 0 0 1.5rem;
-//     min-width: 1.5rem;
-//     height: .5rem;
-//     background-color: rgba(255, 255, 255, .5);
-//   }
-  
-//   .progress-item.active {
-//     background-color: rgba(255, 255, 255, .9);
-//   }
+
   
   @media (max-width: 1000px) {
     .slider {
@@ -117,8 +103,12 @@
     }
   }
   
-  @media (max-width: 500px) {
+  @media (max-width: 580px) {
     .slider {
       --items-per-screen: 2;
+     
+    }
+    .slider-header{
+        padding-top: 3rem;
     }
   }
