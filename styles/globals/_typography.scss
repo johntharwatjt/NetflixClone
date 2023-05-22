@@ -11,8 +11,8 @@ margin: 0;
 
 h1{
     font-family:  var(--ff-title); 
-    font-size: 84px;
-    color: var(--clr-title);
+    font-size: 48PX;
+    color: $clr-title;
 }
 
 h2,h3{
@@ -28,7 +28,7 @@ h2,h3{
         font-size: 20px;
     }
     .secondary-titles{
-        color: var(--clr-secondary);
+        color: $clr-secondary;
         font-size: 22px;
         line-height: 1.1rem;
         
@@ -48,5 +48,5 @@ margin-bottom: 0.85rem;
 
 h3{
  
-    color: var(--clr-h3-text);
+    color: $clr-h3-text;
 }

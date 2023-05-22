@@ -9,8 +9,8 @@ p {
 
 h1 {
   font-family: var(--ff-title);
-  font-size: 84px;
-  color: var(--clr-title);
+  font-size: 48PX;
+  color: #f60505;
 }
 
 h2, h3 {
@@ -27,7 +27,7 @@ h3 {
 }
 
 .secondary-titles {
-  color: var(--clr-secondary);
+  color: #4B0B8D;
   font-size: 22px;
   line-height: 1.1rem;
 }
@@ -42,33 +42,20 @@ p {
 }
 
 h3 {
-  color: var(--clr-h3-text);
-}
-
-:root {
-  /*colors*/
-  --clr-primary: #ffffff;
-  --clr-secondary: #4B0B8D;
-  --clr-icons: #f4f5f8;
-  --clr-title: #ffffff;
-  --clr-h3-text: #e4e4e4;
-  --clr-h2-text:#9e9fa2;
-  --clr-text: rgb(0, 0, 0);
-  --clr-text-dark: rgb(0, 0, 0);
+  color: #e4e4e4;
 }
 
 body {
-  background-color: var(--clr-primary);
+  background-color: #141414;
   display: flex;
   flex-direction: column;
-  color: var(--clr-text);
-  min-width: 266px;
+  color: #ffffff;
 }
 
 /* ----------Defaults-------- */
 html {
   font-family: var(--ff-serif);
-  color: var(--clr-text);
+  color: #ffffff;
   font-size: 1.125rem;
 }
 
@@ -95,6 +82,10 @@ ul {
           margin-block-start: 1em;
 }
 
+.container-fluid {
+  padding-left: 3rem;
+}
+
 @font-face {
   font-family: corbyn;
   src: url(assets/fonts/corbyn.otf);
@@ -105,9 +96,166 @@ ul {
 }
 :root {
   /*font style*/
-  --ff-title: corbyn;
+  --ff-title: font-family: "Bebas Neue", sans-serif;
   --ff-sec-title: font-family: "Roboto Condensed", sans-serif;
   --ff-text: sans;
   --ff-serif: "Crimson Text", serif;
   --ff-tokyodream:tokyodream ;
+}
+
+.nav-bar {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search {
+  padding-right: 0.5rem;
+}
+
+.video-container {
+  position: absolute;
+  z-index: -6;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 82vh;
+}
+.video-container video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.video-container .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4901960784);
+  position: inherit;
+}
+
+.movie-info {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.movie-title {
+  color: white;
+  font-size: 4rem;
+}
+.movie-title__btns {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.movie-title__btns button {
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem 1rem;
+}
+.movie-title__btns .play {
+  background-color: white;
+  color: black;
+}
+.movie-title__btns .more-info {
+  background-color: rgba(93, 92, 93, 0.5843137255);
+  color: white;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+main {
+  padding-top: 10rem;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slider {
+  --items-per-screen: 4;
+  --slider-index: 0;
+  display: flex;
+  flex-grow: 1;
+  margin: 0 0.25rem;
+  transform: translateX(calc(var(--slider-index) * -100%));
+  transition: transform 250ms ease-in-out;
+}
+.slider img {
+  flex: 0 0 calc(100% / var(--items-per-screen));
+  max-width: calc(100% / var(--items-per-screen));
+  aspect-ratio: 16/9;
+  padding: 0.25rem;
+  border-radius: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 1% 1%;
+     object-position: 1% 1%;
+}
+
+.handle {
+  border: none;
+  border-radius: 1rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  z-index: 10;
+  margin: 0.25rem 0;
+  width: 3rem;
+  cursor: pointer;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  line-height: 0;
+  transition: background-color 150ms ease-in-out;
+}
+.handle:hover, .handle:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.left-handle {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.right-handle {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.text {
+  transition: transform 150ms ease-in-out;
+}
+
+.handle:hover .text,
+.handle:focus .text {
+  transform: scale(1.2);
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 3.25rem;
+  align-items: center;
+}
+
+.slider-title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+@media (max-width: 1000px) {
+  .slider {
+    --items-per-screen: 3;
+  }
+}
+@media (max-width: 500px) {
+  .slider {
+    --items-per-screen: 2;
+  }
 }/*# sourceMappingURL=style.css.map */
