@@ -115,7 +115,7 @@ ul {
 .search-btn {
   background-color: rgba(255, 0, 0, 0.438);
   border: none;
-  padding: 0.3rem 0.7rem;
+  padding: 0.2rem 0.7rem;
 }
 .search-btn:hover {
   opacity: 0.7;
