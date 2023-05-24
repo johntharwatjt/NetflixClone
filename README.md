@@ -1,4 +1,4 @@
-# NetflixCone
+# NetflixClone
 cloning Netflix main page 
 
 ## Description
