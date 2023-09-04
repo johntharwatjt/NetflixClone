@@ -139,6 +139,10 @@ function onHandleClick(handle){
 }
 // -------------------------------------------------
 
+const playBtn = document.querySelector(".play");
+playBtn.addEventListener("click", () => {
+  video.paused ? video.play() : video.pause();
+});
 
    
  
