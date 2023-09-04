@@ -125,7 +125,7 @@
 @media (max-width: 385px) {
   .movie-info {
     margin-top: 2rem;
-    margin-bottom: 6rem;
+    margin-bottom: 12rem;
     gap: 1rem;
   }
   .movie-title {
@@ -143,5 +143,8 @@
   }
   .mute {
     bottom: -11rem;
+  }
+    .container-fluid {
+    padding-left: 1rem;
   }
 }
