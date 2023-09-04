@@ -1,14 +1,20 @@
-
-
 .nav-bar {
   justify-content: space-between;
   align-items: center;
   display: flex;
-
-
+  h1 {
+    // font-size: 27px;
+  }
 }
 
 .search {
   padding-right: 0.5rem;
 }
 
+@media (max-width: 385px) {
+  .search {
+    input {
+      width: 8rem;
+    }
+  }
+}

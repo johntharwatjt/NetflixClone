@@ -1,135 +1,147 @@
 @mixin flex($direction) {
-    display: flex;
-    flex-direction: $direction;
-  }
-
-
-.search-btn{
- background-color: rgba(255, 0, 0, 0.438);   
- border: none;
- padding: 0.2rem 0.7rem;
-    &:hover{
-          opacity: 0.7;
-        }
+  display: flex;
+  flex-direction: $direction;
 }
-.video-container{
- position: absolute;
- z-index: -6;
- left: 0;
- top: 0;
- right: 0;
- height: 82vh;
 
- 
- & video{
+.search-btn {
+  background-color: rgba(255, 0, 0, 0.438);
+  border: none;
+  padding: 0.2rem 0.7rem;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.video-container {
+  position: absolute;
+  z-index: -6;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 82vh;
+
+  & video {
     width: 100%;
     height: 100%;
     object-fit: cover;
- }
- img{
+  }
+  img {
     width: 100%;
     height: 100vh;
     object-fit: cover;
     object-position: 1% 1%;
-
-
- }
-    .overlay{
-        width: 100%;
-        height: 100%;
-        background-color: #0000007d;
-        position: inherit;
-    }
+  }
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #0000007d;
+    position: inherit;
+  }
 }
 
-.movie-info{
-  
-    margin-top: 8rem;
-    // border: green 2px solid;
-    @include flex(column);
-    gap: 3rem;
-
+.movie-info {
+  margin-top: 8rem;
+  // margin-top: 2rem; mobile
+  // border: green 2px solid;
+  @include flex(column);
+  gap: 3rem;
 }
 .movie-title {
-    color: white;
-    font-size: 3rem;
+  color: white;
+  font-size: 3rem;
 
-    &__btns{
-        @include flex(row);
-        gap: 1rem;
+  &__btns {
+    @include flex(row);
+    gap: 1rem;
 
-        button{
-            border: none;
-            border-radius: 5px;
-            padding:0.3rem 1rem;
-
-        }
-        .play{
-            background-color: white;
-            color: black;
-            &:hover{
-                opacity: 0.7;
-            }
-        }
-        .more-info{
-            background-color: #5d5c5d95;
-            color: white;
-            align-items: center;
-            gap: 0.2rem;
-             position: relative;
-             cursor:default;
-            &:hover::after{
-                --tool-tip:attr(title) attr(data-tooltip);
-                position: absolute;
-                top:-2.5rem;
-                left: 5.7rem;
-                background-color: rgb(255, 255, 255);
-                width:5rem;
-                height: 2rem;
-                border-radius: 7px;
-                color: black;
-                content: var(--tool-tip);
-            }
-            &:hover::before{
-                content: "";
-                position: absolute;
-                right:-1.5rem;
-                top: -1rem;
-                transform: translateX(-50%);
-                border: 15px solid;
-                border-color: #ffffff #ffffff00 #ffffff00 #ffffff00;
-            }
-       
-        }
+    button {
+      border: none;
+      border-radius: 5px;
+      padding: 0.3rem 1rem;
     }
-}
-
-.description{
-    height: 18vh;
-    max-width: 90ch;
-}
-.description-row{
-    display: flex;
-    
-    gap: 2rem;
-    align-items: flex-end;
-    
-position: relative;
-  
-}
-
-.mute{
-    position: absolute;
-    right: 1rem;
-    bottom: -2rem;
-}
- 
-@media (max-width: 760px) {
-    .description p{
-        height: 20vh;
-        font-size: 15px;
-       
-        
+    .play {
+      background-color: white;
+      color: black;
+      &:hover {
+        opacity: 0.7;
+      }
     }
-  
+    .more-info {
+      background-color: #5d5c5d95;
+      color: white;
+      align-items: center;
+      gap: 0.2rem;
+      position: relative;
+      cursor: default;
+      &:hover::after {
+        --tool-tip: attr(title) attr(data-tooltip);
+        position: absolute;
+        top: -2.5rem;
+        left: 5.7rem;
+        background-color: rgb(255, 255, 255);
+        width: 5rem;
+        height: 2rem;
+        border-radius: 7px;
+        color: black;
+        content: var(--tool-tip);
+      }
+      &:hover::before {
+        content: "";
+        position: absolute;
+        right: -1.5rem;
+        top: -1rem;
+        transform: translateX(-50%);
+        border: 15px solid;
+        border-color: #ffffff #ffffff00 #ffffff00 #ffffff00;
+      }
+    }
   }
+}
+
+.description {
+  height: 18vh;
+  max-width: 90ch;
+}
+.description-row {
+  display: flex;
+
+  gap: 2rem;
+  align-items: flex-end;
+
+  position: relative;
+}
+
+.mute {
+  position: absolute;
+  right: 1rem;
+  bottom: -2rem;
+}
+
+@media (max-width: 760px) {
+  .description p {
+    height: 20vh;
+    font-size: 15px;
+  }
+}
+@media (max-width: 385px) {
+  .movie-info {
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+    gap: 1rem;
+  }
+  .movie-title {
+    font-size: 2rem;
+  }
+  .nav-title {
+    font-size: 27px;
+  }
+
+  .video-container {
+    height: 100vh;
+    img {
+      height: 76vh;
+    }
+  }
+  .mute {
+    bottom: -11rem;
+  }
+}
