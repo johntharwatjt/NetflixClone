@@ -238,7 +238,7 @@ ul {
 }
 @media (max-width: 385px) {
   .movie-info {
-    margin-top: 3rem;
+    margin-top: 4rem;
     margin-bottom: 12rem;
     gap: 1rem;
   }
@@ -250,6 +250,7 @@ ul {
   }
   .nav-title {
     font-size: 27px;
+    padding-left: 1rem;
   }
   .video-container {
     height: 100vh;
