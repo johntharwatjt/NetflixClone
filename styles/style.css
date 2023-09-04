@@ -111,7 +111,7 @@ ul {
   padding-right: 0.5rem;
 }
 
-@media (max-width: 385px) {
+@media (max-width: 400px) {
   .search input {
     width: 8rem;
   }
@@ -236,7 +236,7 @@ ul {
     font-size: 15px;
   }
 }
-@media (max-width: 385px) {
+@media (max-width: 400px) {
   .movie-info {
     margin-top: 4rem;
     margin-bottom: 12rem;
@@ -364,7 +364,7 @@ main {
     padding-top: 3rem;
   }
 }
-@media (max-width: 385px) {
+@media (max-width: 400px) {
   .slider img {
     aspect-ratio: 8/9;
   }
